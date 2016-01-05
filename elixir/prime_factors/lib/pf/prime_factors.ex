@@ -1,9 +1,9 @@
 defmodule PF.PrimeFactors do
-  def prime_factors(num) do
+  def prime_factors(num, candidate \\ 2) do
     cond do
       num == 1 -> []
-      rem(num, 2) == 0 && num > 2 -> [2, div(num, 2)]
-      true -> [num]
+      rem(num, candidate) == 0 -> [candidate] ++ prime_factors(div(num, candidate), candidate)
+      true -> prime_factors(num, candidate + 1)
     end
   end
 end

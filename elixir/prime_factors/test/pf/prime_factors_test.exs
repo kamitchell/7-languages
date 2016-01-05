@@ -12,4 +12,8 @@ defmodule PF.PrimeFactorsTest do
   test "factors of 3 are [3]" do
     assert PF.PrimeFactors.prime_factors(3) == [3]
   end
+
+  test "factors of 4 are [2, 2]" do
+    assert PF.PrimeFactors.prime_factors(4) == [2, 2]
+  end
 end

@@ -1,10 +1,12 @@
 module PrimeFactors (primeFactors) where
 
 primeFactors :: Integer -> [Integer]
-primeFactors 1 = []
-primeFactors x
-    | (x `mod` 2 == 0) && (x > 2) = 2 : (primeFactors (x `div` 2))
-    | (x `mod` 3 == 0) && (x > 3) = 3 : (primeFactors (x `div` 3))
-    | otherwise = [x]
+primeFactors x = primeFactorsInternal x 2
+    where
+        primeFactorsInternal x i
+            | x == 1 = []
+            | x < i * i = [x]
+            | x `mod` i == 0 = i : primeFactorsInternal (x `div` i) i
+            | otherwise = primeFactorsInternal x (i + 1)
 
 --  vim: set et sts=4 sw=4 ts=8 :

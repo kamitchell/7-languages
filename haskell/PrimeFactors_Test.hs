@@ -15,3 +15,5 @@ main = runTestTT $ TestList [test1, test2, test3, test4, test5,
      TestCase $ assertEqual "factors of 8 are [2,2,2]" [2,2,2] (primeFactors 8),
      TestCase $ assertEqual "factors of 9 are [3, 3]" [3, 3] (primeFactors 9)
      ]
+
+--  vim: set et sts=4 sw=4 ts=8 :

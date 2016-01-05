@@ -1,3 +1,6 @@
 bin/
 pkg/
 src/github.com
+src/9fans.net
+src/golang.org
+src/gopkg.in

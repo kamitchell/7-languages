@@ -11,5 +11,3 @@ func Factors(num int) []int {
 		return []int{}
 	}
 }
-
-//  vim: set et sts=2 sw=2 ts=2 :

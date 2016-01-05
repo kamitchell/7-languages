@@ -35,4 +35,12 @@ var _ = Describe("Factors", func() {
 	It("has factors of 7 as [7]", func() {
 		Expect(prime_factors.Factors(7)).To(Equal([]int{7}))
 	})
+
+	It("has factors of 8 as [2, 2, 2]", func() {
+		Expect(prime_factors.Factors(8)).To(Equal([]int{2, 2, 2}))
+	})
+
+	It("has factors of 9 as [3, 3]", func() {
+		Expect(prime_factors.Factors(9)).To(Equal([]int{3, 3}))
+	})
 })
